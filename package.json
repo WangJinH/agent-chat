@@ -1,13 +1,16 @@
 {
-  "name": "monorepo",
+  "name": "@monorepo/root",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "private": true,
   "scripts": {
     "lint:prettier": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:eslint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "dev:frontend": "pnpm run -F @monorepo-frontend dev",
+    "dev:backend": "pnpm -F @monorepo-backend start"
   },
   "engines": {
     "node": ">=22.14.0",
