@@ -1,19 +1,23 @@
 {
-  "name": "@monorepo-backend",
+  "name": "@monorepo/backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "tsx src/app.ts"
+    "start": "tsx src/services/agent.service.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "express": "^5.2.1"
+    "@langchain/core": "^1.2.9",
+    "@langchain/openai": "^1.5.10",
+    "@monorepo/types": "workspace:*",
+    "express": "^5.2.1",
+    "langchain": "^1.5.10"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

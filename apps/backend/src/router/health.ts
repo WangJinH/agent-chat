@@ -1,11 +1,9 @@
-import express from 'express';
-import { handleHealth } from '../controllers/handleHealth';
-import type { Router } from 'express';
+import express from "express";
+import { handleHealth } from "../controllers/handleHealth";
+import type { Router } from "express";
 
-const router: Router = express.Router()
+const router: Router = express.Router();
 
+router.get("/health", handleHealth);
 
-router.get('/health', handleHealth)
-
-
-export default router
+export default router;
