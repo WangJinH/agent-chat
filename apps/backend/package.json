@@ -6,7 +6,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "tsx src/services/agent.service.ts"
+    "start": "tsx src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +16,12 @@
     "@langchain/core": "^1.2.9",
     "@langchain/openai": "^1.5.10",
     "@monorepo/types": "workspace:*",
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "langchain": "^1.5.10"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "dotenv": "^17.4.2",
     "tsx": "^4.23.12"
