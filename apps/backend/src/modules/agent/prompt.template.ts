@@ -1,35 +1,33 @@
 import { ChatPromptTemplate, MessagesPlaceholder } from "@langchain/core/prompts";
 
-
 export const ragPrompt = ChatPromptTemplate.fromMessages([
     [
-        'system',
+        "system",
         `你是一名专业的中文旅游导游 AI Agent。
        你必须优先依据“知识库检索结果”回答用户关于旅游知识库的问题。
        如果知识库没有相关信息，要明确告诉用户“知识库中没有找到足够依据”，不要伪造知识库内容。
        你可以使用通用旅游常识补充回答，但必须把它和知识库内容区分开。
        回答要自然、实用，必要时使用 Markdown。
 
-       上下文：{context}`,
+       上下文：{context}`
     ],
-    new MessagesPlaceholder('history'),
-    ['human', '{question}'],
+    new MessagesPlaceholder("history"),
+    ["human", "{question}"]
 ]);
-
 
 export const planPrompt = ChatPromptTemplate.fromMessages([
     [
-        'system',
+        "system",
         `你是一名资深旅游规划师。
        根据城市、预算、天数、人数和偏好，制定一个现实可执行的旅游计划。
        总预算必须围绕用户预算，不要明显超预算。
        输出 JSON，格式必须是：
     
       "summary": "一句话总结",
-      "budgetBreakdown": {"交通": 0, "住宿": 0, "餐饮": 0, "门票": 0, "其他": 0},
+      "budgetBreakdown": {"accommodation": 0, "accommodation": 0, "food": 0, "tickets": 0, "other": 0},
       "days": [{"day": 1, "title": "", "items": [{"time": "上午", "activity": "", "reason": "", "estimatedCost": 0}]}],
       "tips": ["", ""]
-     }`,
+     }`
     ],
-    ['human', '城市：{city}\n预算：{budget}\n天数：{days}\n人数：{people}\n偏好：{preferences}'],
+    ["human", "城市：{city}\n预算：{budget}\n天数：{days}\n人数：{people}\n偏好：{preferences}"]
 ]);
