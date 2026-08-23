@@ -1,1 +1,1 @@
-export * from './agentResult'
+export * from "./agentResult";
