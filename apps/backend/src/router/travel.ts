@@ -6,6 +6,6 @@ import { travelPlanInputSchema } from "@monorepo/types";
 
 const router: Router = express.Router();
 
-router.get("/travel/plan", [validate(travelPlanInputSchema)], handleTravelPlan);
+router.post("/travel/plan", [validate(travelPlanInputSchema)], handleTravelPlan);
 
 export default router;
