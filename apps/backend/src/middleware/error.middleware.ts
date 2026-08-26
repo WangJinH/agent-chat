@@ -2,7 +2,7 @@ import type { Response, Request, NextFunction } from "express";
 import { AppError } from "../errors/app-errors";
 
 export const errorMiddleware = (err: unknown, req: Request, res: Response, next: NextFunction) => {
-  // 相应已经发送，交由Express自己处理
+  // 响应已经发送，交由Express自己处理
   if (res.headersSent) {
     return next(err);
   }

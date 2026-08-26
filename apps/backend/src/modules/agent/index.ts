@@ -10,7 +10,6 @@ const LLM = new ChatOpenAI({
 });
 
 export const createTravelPlan = async (planOptions: TravelPlanInput) => {
-  console.log(planOptions);
   if (!planOptions) {
     throw new Error("请传递必要的参数");
   }
