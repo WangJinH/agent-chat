@@ -1,6 +1,5 @@
-import morgan from 'morgan';
+import morgan from "morgan";
 
-const logger = morgan('dev')
+const logger = morgan("dev");
 
-
-export default logger
+export default logger;

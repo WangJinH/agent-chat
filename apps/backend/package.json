@@ -13,8 +13,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
+    "@langchain/community": "^1.1.29",
     "@langchain/core": "^1.2.9",
     "@langchain/openai": "^1.5.10",
+    "@langchain/textsplitters": "^1.0.1",
     "@monorepo/types": "workspace:*",
     "cors": "^2.8.6",
     "express": "^5.2.1",
