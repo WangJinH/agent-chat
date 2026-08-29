@@ -1,6 +1,6 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { TravelPlanInput } from "@monorepo/types";
-import { planPrompt } from "./prompt.template";
+import { planPrompt } from "./prompt";
 import { travelPlanSchema } from "@monorepo/types";
 
 // 构建LLM实例
