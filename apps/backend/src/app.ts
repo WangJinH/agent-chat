@@ -14,7 +14,6 @@ app.use(logger);
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: false }));
 
-
 app.use("/api", travelRouter);
 
 // 服务器健康检查接口
