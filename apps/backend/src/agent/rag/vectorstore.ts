@@ -3,4 +3,6 @@ import { embedding } from "./embedding";
 
 export const memoryStore = new MemoryVectorStore(embedding);
 
-export const retriever = await memoryStore.asRetriever(Number(process.env.TOP_K));
+export const retriever = memoryStore.asRetriever({
+    k: Number(process.env.TOP_K ?? 3)
+});

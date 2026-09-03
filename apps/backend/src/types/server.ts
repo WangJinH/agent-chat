@@ -1,4 +1,11 @@
-export interface ServerConfig {
-  port: number;
-  host: string;
+export interface EnvConfig {
+  server: {
+    port: number;
+    host: string;
+  };
+
+  ollama: {
+    model: string;
+    baseUrl: string;
+  };
 }

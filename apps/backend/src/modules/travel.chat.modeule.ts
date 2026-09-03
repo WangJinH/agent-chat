@@ -1,4 +1,3 @@
-// import { LLM } from "../agent/model";
 import { retriever } from "../agent/rag/index";
 
 export const createTravelChat = async (chat: string) => {

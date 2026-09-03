@@ -1,6 +1,4 @@
 import { OllamaEmbeddings } from "@langchain/ollama";
+import { env } from '../../config/env'
 
-export const embedding = new OllamaEmbeddings({
-  model: "bge-m3",
-  baseUrl: "http://localhost:11434"
-});
+export const embedding = new OllamaEmbeddings({ ...env.ollama });

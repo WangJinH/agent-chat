@@ -23,6 +23,4 @@ app.use(notFountMiddleware);
 // 全局错误处理中间件
 app.use(errorMiddleware);
 
-export default app
-
-
+export default app;
