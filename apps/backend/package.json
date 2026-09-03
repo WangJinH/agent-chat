@@ -6,7 +6,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "tsx src/app.ts"
+    "start": "tsx src/server.ts"
   },
   "keywords": [],
   "author": "",

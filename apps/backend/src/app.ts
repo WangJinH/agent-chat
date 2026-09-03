@@ -1,14 +1,12 @@
-import express from "express";
-import "dotenv/config";
+import express, { type Express } from "express";
 import cors from "cors";
-import config from "./config/server";
 import logger from "./config/logger";
 import healthRouter from "./router/health";
 import travelRouter from "./router/travel";
 import { notFountMiddleware } from "./middleware/notfount.middleware";
 import { errorMiddleware } from "./middleware/error.middleware";
 
-const app = express();
+const app: Express = express();
 app.use(cors());
 app.use(logger);
 app.use(express.json({ limit: "1mb" }));
@@ -25,6 +23,6 @@ app.use(notFountMiddleware);
 // 全局错误处理中间件
 app.use(errorMiddleware);
 
-app.listen(config.port, config.host, () => {
-  console.log(`服务器启动成功！服务器地址：http://${config.host}:${config.port}`);
-});
+export default app
+
+
