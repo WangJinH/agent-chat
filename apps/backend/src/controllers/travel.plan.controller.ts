@@ -1,5 +1,5 @@
 import type { RequestHandler } from "express";
-import { createTravelPlan } from "../agent/model";
+import { createTravelPlan } from "../modules/travel.plan.module";
 import { AppError } from "../errors/app-errors";
 
 export const handleTravelPlan: RequestHandler = async (req, res) => {
