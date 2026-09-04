@@ -1,7 +1,7 @@
 interface OllamaModel {
-    name: string;
+  name: string;
 }
 
 export interface OllamaTagsResponse {
-    models: OllamaModel[];
+  models: OllamaModel[];
 }

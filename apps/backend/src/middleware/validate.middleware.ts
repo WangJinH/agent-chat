@@ -10,7 +10,7 @@ export const validate = (schame: ZodType) => {
         success: false,
         code: "VALIDATE ERROR",
         message: "参数格式错误",
-        errors: result.error.issues
+        errors: result.error.issues[0]?.message
       });
     }
     req.body = result.data;

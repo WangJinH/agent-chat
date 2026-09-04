@@ -41,7 +41,13 @@ export const travelPlanInputSchema = z.object({
 
 // 旅游chat参数验证
 export const chatSchema = z.object({
-  question: z.string().trim().min(1, "question 不能为空").max(2000, "question 不能超过 2000 个字符")
+  question: z
+    .string({
+      error: "question 必须是字符串"
+    })
+    .trim()
+    .min(1, "question 不能为空")
+    .max(2000, "question 不能超过 2000 个字符")
 });
 
 // 从 Zod Schema 自动推导 TypeScript 类型
