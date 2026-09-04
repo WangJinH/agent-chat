@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+// 旅游计划请求数据验证
 export const travelPlanInputSchema = z.object({
   city: z
     .string({
@@ -38,5 +39,17 @@ export const travelPlanInputSchema = z.object({
     .optional()
 });
 
+// 旅游chat参数验证
+export const chatSchema = z.object({
+  question: z
+    .string()
+    .trim()
+    .min(1, "question 不能为空")
+    .max(2000, "question 不能超过 2000 个字符")
+});
+
+
+
 // 从 Zod Schema 自动推导 TypeScript 类型
 export type TravelPlanInput = z.infer<typeof travelPlanInputSchema>;
+export type ChatRequest = z.infer<typeof chatSchema>;
